@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrollbar</title>
+    <style>
+      #smallDiv {
+        height: 100px;
+        background-color: blue;
+      }
+      #bigDiv {
+        height: 1000px;
+        background-color: green
+      }
+    </style>
+  </head>
+  <body>
+    <div id="smallDiv">
+      <button id='btn'>Scroll the document vertically by 100 pixels</button>
+    </div>
+    <div id="bigDiv"></div>
+    <script>
+      btn.addEventListener('click', () => window.scrollBy(0, 100));
+    </script>
+  </body>
+</html>

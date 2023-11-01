@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the Document</title>
+    <style>
+      h1 {
+        color: white
+      }
+      #content {
+        height: 700px;
+        width: 350px;
+        overflow: auto;
+        background: green;
+      }
+      #elem1 {
+        margin: 500px;
+        height: 300px;
+        width: 1000px;
+        background-color: white;
+      }
+      #elem2 {
+        margin: 500px;
+        height: 400px;
+        width: 1000px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="btn1" onclick="scrollFunc1()">Scroll 1</button>
+      <br>
+      <button id="btn2" onclick="scrollFunc2()">Scroll 2</button>
+      <br>
+      <button id="btn3" onclick="scrollFunc3()">Scroll 3</button>
+      <br>
+      <br>
+      <div id="content">
+        <div id="start">
+          <h1>
+          Click on the scroll button</h1>
+        </div>
+        <div id="elem1">
+          <h2>Content 1</h2>
+        </div>
+        <div id="elem2">
+          <h2>Content 2</h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      function scrollFunc1() {
+        let btn1 = document.getElementById("elem1");
+        btn1.scrollIntoView(false); // Makes the element 
+      }
+      function scrollFunc2() {
+        let btn2 = document.getElementById("elem2");
+        btn2.scrollIntoView(true);
+      }
+      function scrollFunc3() {
+        let btn3 = document.getElementById("start");
+        btn3.scrollIntoView({
+          block: 'start'
+        });
+      }
+    </script>
+  </body>
+</html>

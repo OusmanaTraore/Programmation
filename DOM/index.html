@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+            color: blanchedalmond;
+        }
+        .text-class{
+            color:aqua;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="DOM"> Welcome to DOM Manipulation Classe!</h2>
+    <h2 id="DOM"> Welcome to DOM Manipulation!</h2>
+    <h2 id="text"></h2>
+    <button id="dom_intro" type="button" onclick="clickFunction()">  Click on Button</button>
+    <script>
+        function clickFunction(){
+            //  Changer le style de corps de texte
+            document.getElementById("DOM").setAttribute("class","text-class");
+            // Récupérer la classe de la balise h2
+            let button = document.getElementsByTagName("h2")[0].getAttribute("class");
+            document.getElementById("text").innerHTML = button;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 1000px;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <select onchange="ChangeScrollState (this);">
+      <option value="">show</option>
+      <option value="hidden">hide</option>
+    </select>
+    <div>
+      Select scroll hide or show
+    </div>
+    <script>
+      function ChangeScrollState(select) {
+        document.documentElement.style.overflow = select.value;
+      }
+    </script>
+  </body>
+</html>

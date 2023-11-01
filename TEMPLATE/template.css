@@ -1,0 +1,27 @@
+*{
+    background-color: black;
+    color: beige;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#cadre{
+    border: 2px double cyan;
+    text-align: center;
+    width: 100vw;
+    height: 100%;
+ 
+}
+
+#cadre_gauche{
+    border: 2px double rgb(16, 241, 46);
+    float: left;
+    text-align: center;
+    width: 20vw;
+}
+
+#cadre_droite{
+    border: 2px double rgb(22, 41, 129);
+    text-align: center;
+    width: 100vw;
+}

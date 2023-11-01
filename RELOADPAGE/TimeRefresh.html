@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeRefresh</title>
+</head>
+<body onload="timeRefresh(2000);"> /* refresh every 2 seconds */
+    <script>
+        function timeRefresh(time) {
+            setTimeout("location.reload();", time);
+        }
+    </script>
+</body>
+</html>
