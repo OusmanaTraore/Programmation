@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      div {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="index.html" id="target"></iframe>
+    <script>
+      var div = document.getElementById("target");
+      div.onload = function() {
+        div.style.height = div.contentWindow.document.body.scrollHeight + 'px';
+      }
+    </script>
+  </body>
+</html>
