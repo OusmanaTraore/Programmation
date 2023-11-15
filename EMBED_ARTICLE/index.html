@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script>
+    window.addEventListener("message", receiveMessage, false);
+      function receiveMessage(event){
+      size= event.data;
+        iFrame = document.getElementById('myiframe');
+        iFrame.style.height = size.height;
+        iFrame.style.width = size.width;
+      }
+    </script>
+  </head>
+  <body style="background-color: rgb(230,230,230)">
+    <iframe id="myiframe" src="https://dev142837.service-now.com/sp?id=embeded_article"
+            frameborder="0" scrolling="no"></iframe>
+    
+  </body>
+</html>

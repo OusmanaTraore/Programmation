@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+    color: #fff;
+}
+.title{
+    text-align: center;
+    /*border: 2px double rgb(32, 248, 158);*/
+    padding: 1rem;
+}
+.card{
+    text-align: center;
+    border: 1px double rgb(70, 56, 199);
+    border-radius: 2rem;
+    /* padding: 1rem;
+    
+    */
+    margin-top:  1rem;
+     /* Add shadows to create the "card" effect */
+  box-shadow: 2px 2px 4px 2px rgba(240, 237, 237, 0.884);
+  transition: 0.3s;
+}
+
+
+.noStart{
+    color: grey;
+}
+.dev{
+    color:rgb(247, 231, 7);
+    border: 2px double greenyellow;
+    text-align: center;
+}
+.test{
+    color: #6af846e8;
+}
+.pending{
+      color:rgba(104, 187, 187, 0.486);
+      text-decoration: line-through;
+      text-decoration-color: rgb(50, 235, 235);
+      text-decoration-thickness: 3px;
+}
+.correction{
+    color: orange;
+}
+.valide{
+    color: #6af846e8;
+    text-decoration: line-through;
+    text-decoration-color: #6af846e8;
+    text-decoration-thickness: 2px;
+  
+}
+
+.card-content{
+    text-align: center;
+    border:2px solid rgb(7, 247, 11);
+    border-radius: 2rem;
+    width: 50%;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: auto;
+  padding-right: auto; 
+  text-align: start;
+}
+.desc{
+    color:aqua;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    
+}
+.userstorie{
+    background: limegreen;
+    border-radius: 2rem 2rem 0 0;
+}
+.line{
+    color: #f4ab3db9;
+    width: 100%;
+    margin-top: 0.2em;
+}
+
+.condition{
+    align-self:center;
+    background-color:#e946f8e8;
+}
+.checked{
+        background-color:#4670f8e8;
+}
+
+  .fait{
+    background-color:gold;
+  }
+
+  .columns{
+    columns: 4 250px;
+    column-rule: 3px solid #fdfdfd;
+    column-gap: 3rem;
+  }
+
+  .columns p {
+    margin-top: 0;
+  }
+
+
+  .columns h2 {
+    margin-top: 0;
+    background: #fff;
+    color: black;
+    padding:  1rem;
+    break-inside: avoid;
+  }
+
+  .columns .quote{
+    margin-top: 0;
+    font-size: 3rem;
+    text-align: center;
+    color:aqua;
+    column-span: all;
+  }
+
+
+  .nowrap{
+    white-space: nowrap;
+  }
