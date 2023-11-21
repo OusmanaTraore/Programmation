@@ -1,0 +1,266 @@
+/*  || RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/* || VARIABLES */ 
+:root {
+    /* FONT */
+    --FF: "Nunito", sans-serif;
+    --FS: clamp(1.75rem, 3vh, 2.25rem);
+    --FS-SM: clamp(1.25rem, 2vh, 1.5rem);
+    --FS-XL: 3rem;
+
+    /* COLOR */
+    --BGCOLOR : #475569;
+    --ALT-BGCOLOR :#1E293B;
+    --RADIAL-COLOR : whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    --DARK-COLOR: #000;
+
+
+    /* SQUARE */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+    /* GENERAL*/
+    --PADDING: 0.5em;
+    --SHADOWS : 0 6px 5px -5px var(--DARK-COLOR);
+    --BORDERS: 2px solid var(--DARK-COLOR);
+}
+@media(prfers-color-scheme:dark){
+    :root{
+        --BGCOLOR : #000;
+        --ALT-BGCOLOR :#333;
+        --RADIAL-COLOR : rgb(217,217,217);
+        --SQUARE-BGCOLOR: rgb(202,174,202); 
+    }
+}
+
+/* || UTILITY CLASSES */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* || GENERAL STYLES */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font: var(--FS) var(--FF);
+    min-height: 100vh;
+    background-color: var(--BGCOLOR) ;
+    background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+}
+
+header,footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header,footer {
+    position: sticky;
+    background-color: var(--ALT-BGCOLOR);
+    color: var(--LIGHT-COLOR);
+    text-align: center;
+}
+
+header{
+    top:0;
+}
+nav{
+    background-color:var(--LIGHT-COLOR);
+    border-bottom: var(--BORDERS);
+    box-shadow: var(--SHADOWS);
+
+}
+
+nav a:any-link {
+    color:var(--DARK-COLOR);
+}
+
+nav :is(a:hover, a:focus) {
+    color: hsla(0,0%,20%, 0.6);
+}
+
+nav a :active{
+    color: red;
+}
+
+main{
+    flex-grow:1;
+    padding: var(--PADDING);
+    /* display: grid;
+    grid-template-columns: repeat(4,300px);
+    gap: min(2vw, 20px); */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start ;
+}
+
+main section {
+    flex-grow: 1 ;
+    padding: var(--PADDING);
+}
+
+main aside{
+    background-color:  hsla(0,0%,20%, 0.8);
+    color: var(--LIGHT-COLOR);
+    font-size: var(--FS-SM);
+    font-style: italic;
+    padding: var(--PADDING);
+}
+.tooltip{
+    border-bottom:  1px dashed orange;
+    position: relative;
+}
+
+.tooltip:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -20px;
+    white-space: nowrap;
+    background-color: var(--DARK-COLOR);
+    padding: var(--PADDING);
+    border-radius: 15px;
+}
+
+footer {
+    bottom: 0;
+}
+
+a:any-link{
+    color: rgb(255, 102, 0);
+}
+
+
+a:hover,
+a:focus{
+    filter: brightness(150%);
+}
+
+/* || FEATURES */
+ 
+.square--highlight{
+    --SQUARE-BGCOLOR: cornflowerblue;
+}
+.square{
+    
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border: var(--BORDERS);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FS-XL);
+    box-shadow: var(--SHADOWS);
+}
+
+/*  || SMALL */
+@media screen and (min-width: 576px) {
+    main {
+
+        justify-content: center;
+        flex-flow:  row wrap;
+        padding: 1rem;
+    }
+
+    .card{
+        width : min(100%, 400px);
+    }
+    .card:last-child {
+        order: -1;
+    }
+}
+
+
+/*  || MEDIUM */
+@media screen and (min-width: 768px) {
+/* nav {
+    display: none;
+} */
+.card {
+    width: min(100%, 325px);
+}
+.card figure {
+    flex-flow: column-reverse;
+}
+/* .card figcaption {
+    margin: 0.1em 0;
+} */
+
+.card p {
+    margin-top: 1rem;
+}
+}
+/*  || LARGE */
+@media screen and (min-width: 992px) {
+    .card {
+        width: min(100%, 400px);
+    }
+    .card:nth-child(2){
+        order: -1;
+    }
+  
+    }
+
+/* || XL */
+@media screen and (min-width: 1200px) {
+    .card{
+        width: min(calc(33% - 1rem), 500px);
+    }
+}
+
+
+/* || MOBILE DEVICE LANDSCAPE */
+
+@media  screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    h1{
+        font-size: 1.5rem;
+    }
+    /* nav {
+        display: none;
+    } */
+
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .card{
+        width: min(calc(33% - 0.25rem), 200px);
+    }
+
+    .card figcaption, .card p {
+        font-size: 1.25rem;
+    }
+}
+    
+@media screen and (min-width: 576px){
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    main section {
+        width: calc(70% - 5px);
+    };
+
+    main aside {
+        width: calc(30% - 5px);
+    };
+
+    .content{
+        margin-top: 20px;
+    }
+}
+
