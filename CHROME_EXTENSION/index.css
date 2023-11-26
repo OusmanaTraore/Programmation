@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
 }
 
 input {
@@ -12,12 +13,39 @@ input {
 }
 
 button {
-    /* width: 100%; */
     padding: 10px;
     margin-top: 5px; 
-    /* box-sizing: border-box; */
     border: 1px solid rgb(57, 207, 120);
     color: white;
     font-weight: bolder;
     background-color: #6bd44b;
+}
+
+#delete-all{
+    color: #6bd44b;
+    background-color: white;
+}
+#tab-btn{
+    background-color:black;
+    color: #17a615;
+}
+#tab-btn:hover {
+    color:aqua;
+    background-color:rgb(144, 98, 35);
+}
+ul{
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li{
+    margin-top: 5px;
+}
+
+a{
+    color :rgb(120, 158, 158);
+    font-size: 20px;
+    font-weight: bolder;
+    /* background-color:black; */
 }
